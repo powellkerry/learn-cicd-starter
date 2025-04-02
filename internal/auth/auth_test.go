@@ -1,10 +1,10 @@
 package auth_test
 
 import (
+	"github.com/bootdotdev/learn-cicd-starter/internal/auth"
 	"net/http"
 	"reflect"
 	"testing"
-	"github.com/bootdotdev/learn-cicd-starter/internal/auth"
 )
 
 func TestGetAPIKey_Success(t *testing.T) {
@@ -34,6 +34,7 @@ func TestGetAPIKey_NoHeader(t *testing.T) {
 		t.Fatalf("expected: %v, got: %v", "no authorization header included", err)
 	}
 }
+
 /*
 func TestGetAPIKey_MalformedHeader(t *testing.T) {
 	headers := http.Header{}
